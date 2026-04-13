@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Game</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="game-container">
+  <img src="assets/images/bg.png" class="background">
+  <div class="center-text">cari produk</div>
+  <div class="center-text2">yg 'agak' aneh</div>
+
+  <!-- ITEM -->
+  <img src="assets/images/jeruk.png" class="item" id="jeruk" style="top: 320px; left: 280px; width:200px;">
+  <img src="assets/images/clip.png" class="item" id="clip" style="top: 310px; left: 45px; width:200px;">
+  <img src="assets/images/permen.png" class="item" id="permen" style="top: 480px; left: 250px; width:270px;">
+  <img src="assets/images/pepero.png" class="item" id="pepero" style="top: 385px; left: 155px; width:170px;">
+  <img src="assets/images/sushi.png" class="item" id="sushi" style="top: 550px; left: 155px; width:190px;">
+  <img src="assets/images/kartu.png" class="item" id="kartu" style="top: 680px; left: 300px; width:280px;">
+  <img src="assets/images/pringles.png" class="item" id="pringles" style="top: 670px; left: 180px; width:150px;">
+  <img src="assets/images/bengbeng.png" class="item" id="bengbeng" style="top: 730px; left: 150px; width:120px;">
+
+</div>
+
+<!-- POPUP -->
+<div id="popup" class="hidden popup">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closePopup()">✖</span>
+
+    <img id="popup-img" src="" class="popup-img">
+    <h2 id="title"></h2>
+    <p id="desc"></p>
+
+    <button onclick="selectItem()">Pilih</button>
+  </div>
+</div>
+
+<!-- INVENTORY -->
+<div class="inventory">
+  <h3>KERANJANG</h3>
+  <div id="inventory-list"></div>
+  <button onclick="checkout()">Beli</button>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+
+<!-- SOUND EFFECT -->
+<audio id="sfx-click" src="assets/sound/tombol.mp3"></audio>
+<audio id="sfx-wrong" src="assets/sound/tetot.mp3"></audio>
+<audio id="sfx-correct" src="assets/sound/hore.mp3"></audio>
+
+<!-- BACKGROUND MUSIC -->
+<audio id="bgm" src="assets/sound/lagu-utama.mp3" loop></audio>
+
+</body>
+</html>
